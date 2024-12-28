@@ -33,8 +33,8 @@ export default async function Page({ params: { locale } }: PageProps) {
               <Trans i18nKey="static_about_description_2" components={ { b: <b/> } } />
             </p>
           </div>
+          <p className={ styles.footer }>{ t('static_about_description_3') }</p>
         </div>
-        <p>{ t('static_about_description_3') }</p>
       </div>
     </div>
   );

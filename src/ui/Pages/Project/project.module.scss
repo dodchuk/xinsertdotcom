@@ -7,7 +7,7 @@
   grid-template-columns: 50% 50%;
   grid-template-areas: "content demo";
 
-  @include mqMaxWidth($screen-s) {
+  @include mqMaxWidth($screen-1100) {
     display: block;
   }
 }
@@ -36,7 +36,7 @@
   padding-bottom: 112px;
   border-right: 1px solid rgba(108, 117, 125, 0.06);
 
-  @include mqMaxWidth($screen-s) {
+  @include mqMaxWidth($screen-1100) {
     padding-right: 0px;
     paddin-bottom: 40px;
     border-right: 0;

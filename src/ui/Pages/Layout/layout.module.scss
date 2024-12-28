@@ -20,7 +20,7 @@
   animation: body-animation 30s ease-in-out;
   min-height: 100%;
 
-  @include mqMaxWidth($screen-s) {
+  @include mqMaxWidth($screen-1100) {
     flex-direction: column;
   }
 }
@@ -41,7 +41,7 @@
   letter-spacing: -1px;
   font-weight: 600;
 
-  @include mqMaxWidth($screen-s) {
+  @include mqMaxWidth($screen-1100) {
     display: block;
     width: 100%;
   }
@@ -54,10 +54,10 @@
 .contentGapContainer {
   padding-left: 80px;
 
-  @include mqMaxWidth($screen-m) {
+  @include mqMaxWidth($screen-1300) {
     padding-left: 40px;
   }
-  @include mqMaxWidth($screen-s) {
+  @include mqMaxWidth($screen-1100) {
     padding-right: 40px;
     padding-bottom: 40px;
   }

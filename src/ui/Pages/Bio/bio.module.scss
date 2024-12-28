@@ -1,3 +1,6 @@
+@import "@/ui/GlobalStyles/mixins/mq.scss";
+@import "@/ui/GlobalStyles/variables.scss";
+
 .container {
   max-width: 790px;
 }
@@ -17,11 +20,24 @@
     display: table;
     clear: both;
   }
+  @include mqMaxWidth($screen-830) {
+    display: block;
+  }
 }
 
 .column {
   width: 50%;
   float: left;
+
+  @include mqMaxWidth($screen-830) {
+    width: 100%;
+    display: block;
+    float: none;
+
+    p {
+      padding-right: 0 !important;
+    }
+  }
 
   p {
     padding-right: 40px;
@@ -32,4 +48,10 @@
       padding-right: 0;
     }
   }
+}
+
+.footer {
+  content: "";
+  display: table;
+  clear: both;
 }

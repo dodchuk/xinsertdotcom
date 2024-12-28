@@ -91,7 +91,7 @@
     cursor: default;
   }
 
-  @include mqMaxWidth($screen-s) {
+  @include mqMaxWidth($screen-1100) {
     padding: 0 27px;
   }
 }

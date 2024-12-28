@@ -41,7 +41,7 @@
   flex-wrap: wrap;
   margin-bottom: 60px;
 
-  @include mqMaxWidth($screen-s) {
+  @include mqMaxWidth($screen-1100) {
     justify-content: center;
   }
 }
