@@ -26,6 +26,10 @@
     margin: 0 -40px;
   }
 
+  @include mqMaxWidth($screen-830) {
+    margin: 0 -40px -40px -40px;
+  }
+
   model-viewer::part(default-progress-bar) {
     height: 4px;
     background: linear-gradient(90deg, #FFFF00, #ADFF2F, #FF69B4, #FFD700 70%, #FFD300 90%);
