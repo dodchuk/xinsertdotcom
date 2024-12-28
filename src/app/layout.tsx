@@ -3,7 +3,8 @@ import Bootstrap from '@/ui/Boostrap/Boostrap';
 import Loading from "@/ui/Loading/Loading";
 import BackgroundMouseMoveEffect from "@/ui/Effects/BackgroundMouseMoveEffect";
 
-import './global.scss';
+// Global Styles
+import '@/ui/GlobalStyles/global.scss';
 
 interface RootLayoutProps {
   children: React.ReactNode
