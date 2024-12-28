@@ -1,7 +1,6 @@
 {
   "racer": {
     "index": 0,
-    "title": "Знайомство",
     "id": "racer",
     "linkToPage": "/planet/earth/creature/racer",
     "modelUrl": "/planet/earth/creature/models/blockbench/00_racer.glb",

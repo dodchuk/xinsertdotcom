@@ -6,6 +6,14 @@ import initTranslations from '@/infrastructure/i18n/i18nInstance';
 import { Trans } from 'react-i18next/TransWithoutContext'
 import styles from '@/ui/Pages/Project/project.module.scss';
 
+export async function generateMetadata({ params: { id } }) {
+  const ModelIndex = String(config[id]?.index).padStart(2, '0');
+
+  return {
+    title: `X Insert / ${ModelIndex}`,
+  }
+}
+
 export default async function Page({ params: { locale, id: activeModel } }) {
   const i18nNamespaces = [`${ activeModel }`];
   const { t } = await initTranslations(locale, i18nNamespaces);
