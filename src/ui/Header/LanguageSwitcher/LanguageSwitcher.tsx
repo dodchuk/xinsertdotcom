@@ -2,9 +2,8 @@
 
 import React from 'react';
 import cn from 'classnames';
+import { useRouter, usePathname, useParams } from 'next/navigation';
 import styles from './languageSwitcher.module.scss';
-import { useRouter } from 'next/navigation';
-import { usePathname, useParams } from 'next/navigation';
 
 const LanguageSwitcher = () => {
   const { locale } = useParams();
