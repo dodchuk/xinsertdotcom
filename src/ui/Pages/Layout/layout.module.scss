@@ -30,6 +30,12 @@
   min-width: 281px;
   max-width: 281px;
   padding-top: 100px;
+
+  @include mqMaxWidth($screen-1100) {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .content {
@@ -49,6 +55,10 @@
 
 .contentContainer {
   padding-top: 112px;
+
+  @include mqMaxWidth($screen-1100) {
+    padding-top: 56px;
+  }
 }
 
 .contentGapContainer {

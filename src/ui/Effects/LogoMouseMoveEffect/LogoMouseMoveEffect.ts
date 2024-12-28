@@ -4,15 +4,22 @@ import { useEffect } from 'react';
 const LogoMouseMoveEffect = () => {
   useEffect(() => {
     const handleMouseMove = (event) => {
-      const { clientX } = event;
-      const { innerWidth, } = window;
+      const { clientX, clientY } = event;
+      const { innerWidth } = window;
+      const mediaQuery = window.matchMedia('(max-width: 1100px)');
 
       // Calculate percentages for CSS variables
       const xPercent = (clientX / innerWidth) * 100;
+      const yPercent = (clientY / innerWidth) * 100;
       const logoElement = document.getElementById("logo");
       if (logoElement) {
         logoElement.style.fill = '#000000';
+
         if (xPercent < 46) {
+          logoElement.style.fill = '#ffffff';
+        }
+
+        if (mediaQuery.matches && yPercent < 20) {
           logoElement.style.fill = '#ffffff';
         }
       }

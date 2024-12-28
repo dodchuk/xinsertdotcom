@@ -22,6 +22,10 @@
   justify-content: center;
   box-sizing: border-box;
 
+  @include mqMaxWidth($screen-1100) {
+    margin: 0 -40px;
+  }
+
   model-viewer::part(default-progress-bar) {
     height: 4px;
     background: linear-gradient(90deg, #FFFF00, #ADFF2F, #FF69B4, #FFD700 70%, #FFD300 90%);
@@ -38,8 +42,9 @@
 
   @include mqMaxWidth($screen-1100) {
     padding-right: 0px;
-    paddin-bottom: 40px;
+    padding-bottom: 40px;
     border-right: 0;
+    padding-top: 56px;
   }
 }
 
@@ -61,5 +66,4 @@
     margin-top: 10px;
     margin-bottom: 15px;
   }
-
 }
