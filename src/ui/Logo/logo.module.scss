@@ -26,13 +26,18 @@
 .logo {
   svg {
     transition: fill 0.7s ease;
-    fill: #000;
+    fill: #000000;
     width: 100%;
     max-height: 100%;
     max-width: 100%;
 
     &:hover {
       animation: pulse 2.3s infinite;
+    }
+  }
+  @include mqMaxWidth($screen-1100) {
+    svg {
+      fill: #FFFFFF;
     }
   }
 }
