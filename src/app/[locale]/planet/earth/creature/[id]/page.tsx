@@ -5,7 +5,6 @@ import config from "@/ui/Pages/Project/config.json";
 import initTranslations from '@/infrastructure/i18n/i18nInstance';
 import { Trans } from 'react-i18next/TransWithoutContext'
 import styles from '@/ui/Pages/Project/project.module.scss';
-import cn from "classnames";
 
 export default async function Page({ params: { locale, id: activeModel } }) {
   const i18nNamespaces = [`${ activeModel }`];
@@ -16,16 +15,16 @@ export default async function Page({ params: { locale, id: activeModel } }) {
 
   return (
     <div className={ layoutStyles.contentGapContainer }>
-    <div className={ styles.sample }>
-      <div className={ styles.content }>
-        <span className={ styles.count }>{ ModelIndex }</span>
-        <h2 className={ layoutStyles.pageTitle }>{ t('title') }</h2>
-        <Trans i18nKey="description" components={ { b: <b/> } } />
+      <div className={ styles.sample }>
+        <div className={ styles.content }>
+          <span className={ styles.count }>{ ModelIndex }</span>
+          <h2 className={ layoutStyles.pageTitle }>{ t('title') }</h2>
+          <Trans i18nKey="description" components={ { b: <b/> } } />
+        </div>
+        <div className={ styles.demo }>
+          <ModelViewer activeModel={ activeModel }/>
+        </div>
       </div>
-      <div className={ styles.demo }>
-        <ModelViewer activeModel={ activeModel }/>
-      </div>
-    </div>
     </div>
   );
 };
