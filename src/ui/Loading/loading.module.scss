@@ -1,0 +1,75 @@
+$checkerBlack: #0F0F0F; /* Matches the dark gray of page2 */
+$checkerWhite: #703619; /* Matches the rich dark brown of page2 */
+
+.topLevel {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 144px;
+  background: transparent;
+}
+
+.logo {
+  position: relative;
+  top: -144px;
+  width: 288px;
+  margin: 0 auto;
+
+    svg {
+      animation: pulse 2.3s infinite;
+      transition: opacity .2s ease-out;
+      opacity: 1;
+      fill: #fff;
+      width: 100%;
+      max-height: 100%;
+      max-width: 100%;
+    }
+}
+
+.logoContainer {
+  width: 200px;
+  margin: 38px auto;
+}
+
+.loading {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: $checkerWhite;
+  background-image: linear-gradient(45deg, $checkerBlack 25%, transparent 25%),
+  linear-gradient(-45deg, $checkerBlack 25%, transparent 25%),
+  linear-gradient(45deg, transparent 75%, $checkerBlack 75%),
+  linear-gradient(-45deg, transparent 75%, $checkerBlack 75%);
+  background-size: 288px 288px;
+  background-position: 0 0, 0 144px, 144px -144px, -144px 0px;
+}
+
+.loadingBarContainer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  background: #E0E0E0;
+}
+
+.loadingBar {
+  height: 4px;
+  //background: #000000;
+  //border-bottom: 1px solid #000000;
+  background: linear-gradient(90deg, #FFFF00, #ADFF2F, #FF69B4, #FFD700 70%, #FFD300 90%); /* Bright Yellow, Green Yellow, Hot Pink, Racing Yellow */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03); /* Scale the logo up to 110% of its size */
+  }
+  100% {
+    transform: scale(1);
+  }
+}

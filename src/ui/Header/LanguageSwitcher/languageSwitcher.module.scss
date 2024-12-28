@@ -1,0 +1,47 @@
+.lang {
+  position: absolute;
+  top: 39px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+
+  .button {
+    padding: 4px 10px 4px 10px;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace !important;
+    font-size: 12px;
+    background: transparent;
+    color: #2f2f2f; // Primary chocolate color
+    border: 1px solid #2f2f2f; // Outline style
+    border-radius: 16px; // Slight rounding for modern look
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    outline: 0;
+
+    &:hover {
+      background: rgba(112, 54, 25, 0.1); // Slight fill on hover
+      border-color: #915235FF; // Brighter hover border
+      color: #915235FF; // Text color on hover
+    }
+
+    &.hidden {
+      display: none; // Utility class to hide the button when needed
+    }
+
+    &.active {
+      border: 1px solid #89929c; // Outline style
+      color: #89929c;
+      transform: scale(1.05); // Press effect
+    }
+
+    &:hover:not(.active) {
+    }
+
+    &:focus {
+    }
+  }
+}
+
+
+
+

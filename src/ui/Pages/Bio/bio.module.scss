@@ -1,0 +1,35 @@
+.container {
+  max-width: 790px;
+}
+
+.content {
+  text-align: left;
+  color: #eee;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -1px;
+  font-weight: 600;
+}
+
+.twocolumns {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.column {
+  width: 50%;
+  float: left;
+
+  p {
+    padding-right: 40px;
+  }
+
+  &:last-child {
+    p {
+      padding-right: 0;
+    }
+  }
+}

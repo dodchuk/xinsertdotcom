@@ -1,0 +1,31 @@
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03); // Scale the logo up to 110% of its size
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.logoWrp {
+  margin-bottom: 48px;
+  max-width: 200px;
+  position: relative;
+}
+
+.logo {
+  svg {
+    transition: fill 0.7s ease;
+    fill: #000;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+
+    &:hover {
+      animation: pulse 2.3s infinite;
+    }
+  }
+}

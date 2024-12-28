@@ -1,0 +1,19 @@
+#root,
+body,
+html,
+canvas {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: black;
+  position: fixed;
+  overflow: hidden;
+  overscroll-behavior-y: none;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

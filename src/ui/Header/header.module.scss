@@ -1,0 +1,38 @@
+.headerWrp {
+  width: 100%;
+  padding: 0 40px;
+}
+
+.navigation {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.navigationItem {
+  display: inline-block;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-bottom: 25px;
+
+  a {
+    font-size: 21px;
+    color: #6C757D;
+    border-bottom: 2px solid transparent;
+    text-transform: uppercase;
+    text-underline: none;
+    padding-bottom: 4px;
+  }
+
+  &:hover,
+  &.active {
+    a {
+      color: #eee;
+      border-bottom: 2px solid #eee;
+    }
+  }
+
+}

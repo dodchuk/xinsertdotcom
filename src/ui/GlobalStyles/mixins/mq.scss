@@ -1,0 +1,47 @@
+@mixin mqMaxWidth($max) {
+  @media only screen and (max-width: $max) {
+    @content
+  }
+}
+
+@mixin mqMinWidth($min) {
+  @media only screen and (min-width: $min) {
+    @content
+  }
+}
+
+@mixin mqMaxHeight($max) {
+  @media only screen and (max-height: $max) {
+    @content
+  }
+}
+
+@mixin mqMinHeight($min) {
+  @media only screen and (min-height: $min) {
+    @content
+  }
+}
+
+@mixin mqOrientation($orientation) {
+  @media only screen and (orientation: $orientation) {
+    @content
+  }
+}
+
+@mixin mqOrientation($orientation) {
+  @media only screen and (orientation: $orientation) and (max-width: $screenM) {
+    @content
+  }
+}
+
+@mixin mqMaxHeight($max) {
+  @media only screen and (max-height: $max) {
+    @content
+  }
+}
+
+@mixin mqMinMaxWidth($min, $max) {
+  @media only screen and (min-width: $min) and (max-width: $max) {
+    @content
+  }
+}
