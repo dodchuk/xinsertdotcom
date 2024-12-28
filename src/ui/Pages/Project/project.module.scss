@@ -16,8 +16,8 @@
   box-sizing: border-box;
 
   model-viewer::part(default-progress-bar) {
-    height: 4px !important;
-    background: linear-gradient(90deg, #FFFF00, #ADFF2F, #FF69B4, #FFD700 70%, #FFD300 90%) !important;
+    height: 4px;
+    background: linear-gradient(90deg, #FFFF00, #ADFF2F, #FF69B4, #FFD700 70%, #FFD300 90%);
   }
 }
 
