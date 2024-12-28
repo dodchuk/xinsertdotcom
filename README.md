@@ -1,13 +1,12 @@
 # X Insert Website
 
 ## Overview
-This project is built with [Next.js](https://nextjs.org/) and showcases dynamic functionality, including localized translations (supports multiple languages using `i18n`), and model viewer (displays interactive 3D models integrated seamlessly with the interface).
+This project is built with `next` and showcases functionality, including localized translations (`i18n`), and ModelViewer (`@google/model-viewer`) which displays interactive 3D models.
 
 ## Command Line
-```bash
-
 ### Development
 Run the development server to test your application locally:
+
 ```bash
 npm run dev
 ```
@@ -33,7 +32,17 @@ Check the project for code quality issues:
 npm run lint
 ```
 Runs ESLint on the project files to identify and fix potential problems.
+
+### nit
+
 ```bash
 node -v > .nvmrc
 ```
 Update the `.nvmrc` file with the current Node.js version.
+
+
+```bash
+git push https://github.com/{username}/{repo}
+```
+
+It will prompt you to input username and password or not if you're using ssh keys.
