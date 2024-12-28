@@ -1,8 +1,15 @@
+@import "@/ui/GlobalStyles/mixins/mq.scss";
+@import "@/ui/GlobalStyles/variables.scss";
+
 .sample {
   display: grid;
   position: relative;
   grid-template-columns: 50% 50%;
   grid-template-areas: "content demo";
+
+  @include mqMaxWidth($screen-s) {
+    display: block;
+  }
 }
 
 .demo {
@@ -28,6 +35,12 @@
   padding-right: 60px;
   padding-bottom: 112px;
   border-right: 1px solid rgba(108, 117, 125, 0.06);
+
+  @include mqMaxWidth($screen-s) {
+    padding-right: 0px;
+    paddin-bottom: 40px;
+    border-right: 0;
+  }
 }
 
 .count {
@@ -43,4 +56,10 @@
   letter-spacing: -1px;
   color: #797e81;
   vertical-align: middle;
+
+  @include mqMaxWidth($screen-1245) {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
 }

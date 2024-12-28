@@ -1,3 +1,6 @@
+@import "@/ui/GlobalStyles/mixins/mq.scss";
+@import "@/ui/GlobalStyles/variables.scss";
+
 .modelContent {
   padding: 0 10px;
   text-align: center;
@@ -37,7 +40,10 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 60px;
-  // justify-content: center;
+
+  @include mqMaxWidth($screen-s) {
+    justify-content: center;
+  }
 }
 
 .albumCover {
