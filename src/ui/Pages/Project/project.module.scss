@@ -23,10 +23,6 @@
   box-sizing: border-box;
 
   @include mqMaxWidth($screen-1100) {
-    margin: 0 -40px;
-  }
-
-  @include mqMaxWidth($screen-830) {
     margin: 0 -40px -40px -40px;
   }
 

@@ -80,4 +80,8 @@
   color: #89929c;
   vertical-align: middle;
   display: inline-block;
+
+  @include mqMaxWidth($screen-1100) {
+    font-size: 36px;
+  }
 }

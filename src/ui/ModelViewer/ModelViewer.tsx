@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import config from '@/ui/Pages/Project/config.json';
+import isServer from '@/infrastructure/isServer';
 
 interface IProps {
   activeModel: string,
@@ -9,11 +10,16 @@ interface IProps {
 }
 
 const ModelViewer = ({ activeModel, children }: IProps) => {
+  let mediaQueries: MediaQueryList | undefined = undefined;
+  if (!isServer()) {
+    mediaQueries = window?.matchMedia('(max-width: 1100px)');
+  }
+
   useEffect(() => {
     import('@google/model-viewer');
 
-    const modelViewer = document.querySelector('model-viewer');
-    if (modelViewer) {
+    const modelViewer = document?.querySelector('model-viewer');
+    if (modelViewer && !mediaQueries?.matches) {
       const orbitCycle = [
         '45deg 55deg 4m',
         '-55deg 0deg 2m',
@@ -41,7 +47,7 @@ const ModelViewer = ({ activeModel, children }: IProps) => {
       camera-orbit="180deg 90deg"
       shadow-intensity="1"
       camera-controls
-      auto-rotate
+      auto-rotate={ !mediaQueries?.matches }
       loading="lazy"
       touch-action="pan-y"
     >

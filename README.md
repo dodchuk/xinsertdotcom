@@ -1,7 +1,7 @@
 # X Insert Website
 
 ## Overview
-This project is built with `next` and showcases functionality, including localized translations (`i18n`), and ModelViewer (`@google/model-viewer`) which displays interactive 3D models.
+This project is built with `next` and showcases functionality, including localized translations (`i18n`) for multi-language support and an interactive 3D model viewer powered by `@google/model-viewer`.
 
 ## Command Line
 ### Development
