@@ -91,7 +91,7 @@
 
   svg {
     cursor: pointer;
-    fill: #26282a;
+    fill: #000;
   }
 }
 
@@ -102,7 +102,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(77, 15, 5, 0.4);
+    background: rgb(19 11 9 / 80%);
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -129,9 +129,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, #ff4500, #ff00ff, #00ffff, #ffff00, #ff6347);
+    background: radial-gradient(circle, #cc3700, #cc00cc, #00cccc, #cccc00, #cc5037);
     background-size: 300% 300%;
-    mix-blend-mode: screen; // Adds a surreal blend of colors
+    mix-blend-mode: color-dodge; // Adds a surreal blend of colors
     animation: colorShift 5s infinite linear;
   }
 }
@@ -162,7 +162,7 @@
     text-underline: none;
     padding-bottom: 4px;
     transition: all 0.3s ease-in-out;
-    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Glow-like shadow */
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
     @include mqMaxWidth($screen-1100) {
       font-size: 24px;
@@ -179,11 +179,9 @@
       border-bottom: 2px solid #eee;
 
       @include mqMaxWidth($screen-1100) {
-        color: #bcffbc;
+        color: #b1a8fd;
         border-bottom: 2px solid transparent;
-        text-shadow: 0px 8px 12px rgba(255, 215, 0, 0.5),
-        0px 4px 6px rgba(0, 0, 0, 0.1); /* Intense glow */
-        transform: scale(1.05); /* Slight scaling for hover interaction */
+        transform: scale(1.05);
       }
     }
   }
