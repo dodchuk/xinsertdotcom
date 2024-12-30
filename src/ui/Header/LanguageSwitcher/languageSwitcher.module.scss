@@ -25,6 +25,11 @@
       color: #fff; // Text color on hover
     }
 
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+
     &.hidden {
       display: none; // Utility class to hide the button when needed
     }

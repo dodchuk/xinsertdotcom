@@ -34,6 +34,11 @@
     &:hover {
       animation: pulse 2.3s infinite;
     }
+
+    &:active {
+      position: relative;
+      top: 1px;
+    }
   }
   @include mqMaxWidth($screen-1100) {
     svg {
