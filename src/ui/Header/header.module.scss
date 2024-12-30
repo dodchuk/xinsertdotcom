@@ -91,7 +91,7 @@
 
   svg {
     cursor: pointer;
-    fill: #fff;
+    fill: #26282a;
   }
 }
 
@@ -102,7 +102,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(77, 15, 5, 0.4);
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -114,6 +114,34 @@
     @include mqMaxWidth($screen-1100) {
       text-align: center;
     }
+  }
+}
+
+
+.lsdBackground {
+  display: none;
+
+  @include mqMaxWidth($screen-1100) {
+    display: block;
+    z-index: 80;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #ff4500, #ff00ff, #00ffff, #ffff00, #ff6347);
+    background-size: 300% 300%;
+    mix-blend-mode: screen; // Adds a surreal blend of colors
+    animation: colorShift 5s infinite linear;
+  }
+}
+
+@keyframes colorShift {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
   }
 }
 
@@ -133,14 +161,31 @@
     text-transform: uppercase;
     text-underline: none;
     padding-bottom: 4px;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Glow-like shadow */
+
+    @include mqMaxWidth($screen-1100) {
+      font-size: 24px;
+      color: #fff;
+    }
   }
 
-  &:hover,
+  &:hover {
+    opacity: 0.7;
+  }
   &.active {
     a {
       color: #eee;
       border-bottom: 2px solid #eee;
+
+      @include mqMaxWidth($screen-1100) {
+        color: #bcffbc;
+        border-bottom: 2px solid transparent;
+        text-shadow: 0px 8px 12px rgba(255, 215, 0, 0.5),
+        0px 4px 6px rgba(0, 0, 0, 0.1); /* Intense glow */
+        transform: scale(1.05); /* Slight scaling for hover interaction */
+      }
     }
   }
-
 }
+

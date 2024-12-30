@@ -32,6 +32,7 @@ const Header = async ({ pathname = '', locale = i18nConfig.defaultLocale }: IPro
           </div>
         </label>
         <div className={ styles.navigationCollection }>
+          <div className={ styles.lsdBackground } />
           <div className={ styles.navigationOverlay }>
             <label htmlFor="bigtasty">
               <div className={ styles.doublecheeseburger }>
