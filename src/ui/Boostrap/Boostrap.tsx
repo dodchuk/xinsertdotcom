@@ -1,11 +1,10 @@
 'use client';
 
 import React from 'react';
-import cn from 'classnames';
-import Header from "@/ui/Header";
+import Header from '@/ui/Header';
 import layoutStyles from '@/ui/Pages/Layout/layout.module.scss';
 import { useParams, usePathname } from 'next/navigation';
-import i18nConfig from "@/infrastructure/i18n/i18nConfig";
+import i18nConfig from '@/infrastructure/i18n/i18nConfig';
 
 interface IProps {
   children: React.ReactNode;
@@ -20,7 +19,7 @@ const Bootstrap = ({ children }: IProps) => {
   }
 
   return (
-    <div className={ cn(layoutStyles.page) }>
+    <div className={ layoutStyles.page }>
       <div className={ layoutStyles.sidebar }>
         <Header pathname={ pathname } locale={ locale } />
       </div>
